@@ -26,7 +26,7 @@ public class ProductService {
 
     public Product saveProduct(Product product) throws SaveException{
         if(!productRepository.existsById((long) product.getId())){
-            throw new SaveException("An error occoured during save operation");
+            throw new SaveException("An error occurred during save operation");
         }
         return productRepository.save(product);
     }
